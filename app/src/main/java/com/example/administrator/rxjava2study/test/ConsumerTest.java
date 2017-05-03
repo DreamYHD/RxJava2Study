@@ -1,4 +1,4 @@
-package com.example.administrator.rxjava2study;
+package com.example.administrator.rxjava2study.test;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;

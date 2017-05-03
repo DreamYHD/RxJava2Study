@@ -1,4 +1,4 @@
-package com.example.administrator.rxjava2study;
+package com.example.administrator.rxjava2study.test;
 
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
@@ -19,6 +19,7 @@ public class FlowableTest {
             @Override
             public void subscribe(FlowableEmitter e) throws Exception {
 
+                System.out.println(e.requested());
                 e.onNext("hello");
                 e.onNext("nuc");
                 e.onNext("android");
@@ -34,7 +35,7 @@ public class FlowableTest {
             public void onSubscribe(Subscription s) {
                 System.out.println("Subscription");
                 mSubscription=s;
-                s.request(Long.MAX_VALUE);
+                s.request(1000);
             }
 
             @Override
