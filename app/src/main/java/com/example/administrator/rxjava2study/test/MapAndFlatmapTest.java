@@ -1,7 +1,11 @@
 package com.example.administrator.rxjava2study.test;
 
+import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Flowable;
@@ -112,5 +116,44 @@ public class MapAndFlatmapTest {
 
                     }
                 });
+
+        List<String>mStrings=new ArrayList<>();
+        mStrings.add("yanghaodong");
+        mStrings.add("yang");
+        mStrings.add("hao");
+        mStrings.add("dong");
+
+
+        Flowable.just(mStrings)
+                .flatMap(new Function<List<String>, Publisher<String>>() {
+                    @Override
+                    public Publisher<String> apply(List<String> mStrings) throws Exception {
+                        return Flowable.fromIterable(mStrings);
+                    }
+                }).subscribe(new Consumer<String>() {
+            @Override
+            public void accept(String mS) throws Exception {
+                System.out.println(mS);
+            }
+        });
+
+        Observable.fromIterable(mStrings)
+                .subscribe(new Consumer<String>() {
+                    @Override
+                    public void accept(String mS) throws Exception {
+                        System.out.println(mS);
+                    }
+                });
+
+
+
+
+
+
+
     }
+
+
+
+
     }

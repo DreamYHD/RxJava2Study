@@ -56,10 +56,6 @@ public class FlowableTest {
 
             }
         };
-
         mFlowable.subscribe(mSubscriber);
-
-
-
     }
 }
