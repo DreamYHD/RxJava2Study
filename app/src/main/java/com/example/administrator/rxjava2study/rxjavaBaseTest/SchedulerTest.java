@@ -1,6 +1,4 @@
-package com.example.administrator.rxjava2study.test;
-
-import com.example.administrator.rxjava2study.test.SchedulerUtils.SchedulerProvider;
+package com.example.administrator.rxjava2study.rxjavaBaseTest;
 
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;

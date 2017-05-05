@@ -1,8 +1,6 @@
-package com.example.administrator.rxjava2study.test.SchedulerUtils;
+package com.example.administrator.rxjava2study.rxjavaBaseTest.SchedulerUtils;
 
 import io.reactivex.Scheduler;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.schedulers.Schedulers;
 
 /**
  * Created by dreamY on 2017/5/4.

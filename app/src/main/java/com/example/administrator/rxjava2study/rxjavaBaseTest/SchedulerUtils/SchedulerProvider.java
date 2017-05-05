@@ -1,4 +1,4 @@
-package com.example.administrator.rxjava2study.test.SchedulerUtils;
+package com.example.administrator.rxjava2study.rxjavaBaseTest.SchedulerUtils;
 
 import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
